@@ -1,0 +1,28 @@
+---
+const links = [
+  { href: "/", label: "Introduction" },
+  { href: "/basics", label: "Basics of Git and GitHub" },
+  { href: "/installation", label: "Installation & Setup" },
+  { href: "/commands", label: "Basic Commands" },
+  { href: "/branching", label: "Branching Workflow" },
+  { href: "/pull-requests", label: "Pull Requests" },
+];
+---
+
+<aside class="w-full md:w-64 bg-gray-800 text-white p-6 md:relative">
+  <h2 class="text-xl font-bold text-gray-200 mb-6">Documentation</h2>
+  <ul class="space-y-4">
+    {
+      links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="block py-2 px-4 rounded-lg text-white hover:bg-gray-700 transition duration-300"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</aside>

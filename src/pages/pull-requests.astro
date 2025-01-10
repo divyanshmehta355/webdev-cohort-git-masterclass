@@ -1,0 +1,143 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <div class="max-w-6xl mx-auto py-10 px-6">
+    <!-- Header Section -->
+    <header class="text-center mb-10">
+      <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+        Working with Pull Requests
+      </h1>
+      <p class="text-lg text-gray-600">
+        Learn how to create, review, and merge pull requests (PRs) to manage
+        code changes effectively in a collaborative environment.
+      </p>
+    </header>
+
+    <!-- What is a Pull Request? -->
+    <section class="mb-10">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+        What is a Pull Request?
+      </h2>
+      <p class="text-gray-600 leading-relaxed">
+        A pull request (PR) is a way to propose changes to a codebase. It allows
+        team members to review, discuss, and merge changes into the main branch
+        in a controlled and collaborative manner.
+      </p>
+    </section>
+
+    <!-- Creating a Pull Request -->
+    <section class="mb-10">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+        How to Create a Pull Request
+      </h2>
+      <ol class="list-decimal pl-6 text-gray-600 leading-relaxed space-y-4">
+        <li>
+          Push your branch to the remote repository: <code
+            >git push origin feature/branch-name</code
+          >
+        </li>
+        <li>
+          Go to the GitHub repository and navigate to the "Pull Requests" tab.
+          <div class="my-4">
+            <img
+              src="https://bg-so-1.zippyimage.com/2025/01/10/ab326ca49937282fc4e6cea93a87a150.png"
+              alt="GitHub Pull Requests Tab"
+              class="rounded-lg shadow-lg mx-auto"
+            />
+          </div>
+        </li>
+        <li>Click on <strong>"New Pull Request"</strong>.</li>
+        <li>
+          Select the base branch (e.g., <code>main</code>) and compare it with
+          your branch.
+        </li>
+        <li>
+          Provide a meaningful title and description for your PR. Explain what
+          changes you’ve made and why.
+        </li>
+        <li>Click <strong>"Create Pull Request"</strong> to submit your PR.</li>
+      </ol>
+    </section>
+
+    <!-- Reviewing a Pull Request -->
+    <section class="mb-10">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+        How to Review a Pull Request
+      </h2>
+      <p class="text-gray-600 leading-relaxed">
+        Reviewing a pull request is a crucial step to ensure code quality and
+        catch issues before merging.
+      </p>
+      <ol class="list-decimal pl-6 text-gray-600 leading-relaxed space-y-4">
+        <li>Navigate to the "Pull Requests" tab in the repository.</li>
+        <li>Select the PR you want to review.</li>
+        <li>
+          Click on the "Files changed" tab to see the differences introduced by
+          the PR.
+        </li>
+        <li>
+          Add comments by clicking the <strong>"+ Add a comment"</strong> button
+          next to a line of code.
+          <div class="my-4">
+            <img
+              src="https://bg-so-1.zippyimage.com/2025/01/10/c636471320cfb2871f3f827e9db48c68.png"
+              alt="GitHub Add Comment"
+              class="rounded-lg shadow-lg mx-auto"
+            />
+          </div>
+        </li>
+        <li>
+          Once the review is complete, select "Approve" or request changes as
+          necessary.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Merging a Pull Request -->
+    <section class="mb-10">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+        Merging a Pull Request
+      </h2>
+      <p class="text-gray-600 leading-relaxed">
+        After a pull request is reviewed and approved, it can be merged into the
+        base branch.
+      </p>
+      <ol class="list-decimal pl-6 text-gray-600 leading-relaxed space-y-4">
+        <li>Go to the pull request in GitHub.</li>
+        <li>Ensure all checks (e.g., tests, CI/CD) have passed.</li>
+        <li>
+          Click <strong>"Merge pull request"</strong> and confirm the merge.
+        </li>
+        <li>
+          If necessary, delete the branch after merging to keep the repository
+          clean.
+          <div class="my-4">
+            <img
+              src="https://bg-so-1.zippyimage.com/2025/01/10/0637e69868dd5142378732debd6bc80b.png"
+              alt="GitHub Merge PR"
+              class="rounded-lg shadow-lg mx-auto"
+            />
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Best Practices for Pull Requests -->
+    <section>
+      <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+        Best Practices for Pull Requests
+      </h2>
+      <ul class="list-disc pl-6 text-gray-600 leading-relaxed space-y-4">
+        <li>Keep pull requests small and focused on a single task.</li>
+        <li>Provide clear and concise descriptions of the changes made.</li>
+        <li>
+          Regularly update your branch with the base branch to avoid conflicts.
+        </li>
+        <li>Request reviews from relevant team members.</li>
+        <li>Address feedback promptly to ensure timely merges.</li>
+      </ul>
+    </section>
+  </div>
+</MainLayout>

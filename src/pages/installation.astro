@@ -1,0 +1,190 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <div class="max-w-6xl mx-auto py-10 px-6">
+    <!-- Header Section -->
+    <header class="text-center mb-10">
+      <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+        Install and Configure Git
+      </h1>
+      <p class="text-lg text-gray-600">
+        Follow these easy steps to set up Git on your system and start
+        contributing effectively at ChaiCode.
+      </p>
+    </header>
+
+    <!-- Installation Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Windows Card -->
+      <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+        <img
+          src="https://img.icons8.com/fluency/96/windows-11.png"
+          alt="Windows"
+          class="h-12 w-12 mx-auto mb-4"
+        />
+        <h2 class="text-xl font-semibold text-gray-800 text-center mb-4">
+          Windows
+        </h2>
+        <p class="text-gray-600 text-sm mb-4">
+          Download Git from the official website and follow the installer wizard
+          to set it up.
+        </p>
+        <a
+          href="#windows-install"
+          class="block text-blue-600 font-medium text-center hover:underline"
+        >
+          View Steps
+        </a>
+      </div>
+
+      <!-- macOS Card -->
+      <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+        <img
+          src="https://img.icons8.com/color/96/mac-logo.png"
+          alt="macOS"
+          class="h-12 w-12 mx-auto mb-4"
+        />
+        <h2 class="text-xl font-semibold text-gray-800 text-center mb-4">
+          macOS
+        </h2>
+        <p class="text-gray-600 text-sm mb-4">
+          Use the terminal to check if Git is pre-installed, or install it via
+          Homebrew for a quick setup.
+        </p>
+        <a
+          href="#macos-install"
+          class="block text-blue-600 font-medium text-center hover:underline"
+        >
+          View Steps
+        </a>
+      </div>
+
+      <!-- Linux Card -->
+      <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+        <img
+          src="https://img.icons8.com/external-those-icons-flat-those-icons/96/external-Linux-logos-and-brands-those-icons-flat-those-icons.png"
+          alt="Linux"
+          class="h-12 w-12 mx-auto mb-4"
+        />
+        <h2 class="text-xl font-semibold text-gray-800 text-center mb-4">
+          Linux
+        </h2>
+        <p class="text-gray-600 text-sm mb-4">
+          Install Git using your distribution’s package manager with a few
+          simple commands.
+        </p>
+        <a
+          href="#linux-install"
+          class="block text-blue-600 font-medium text-center hover:underline"
+        >
+          View Steps
+        </a>
+      </div>
+    </div>
+
+    <!-- Detailed Installation Sections -->
+    <section id="windows-install" class="mt-12">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+        Installing Git on Windows
+      </h3>
+      <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+        <li>
+          Visit the official Git website: <a
+            href="https://git-scm.com/"
+            class="text-blue-600 hover:underline">git-scm.com</a
+          >.
+        </li>
+        <li>Download and run the Git installer for Windows.</li>
+        <li>Follow the installation wizard, keeping default options.</li>
+        <li>
+          Verify installation by opening Command Prompt and running <code
+            class="bg-gray-100 p-1 rounded">git --version</code
+          >.
+        </li>
+      </ol>
+      <img
+        src="https://bg-so-1.zippyimage.com/2025/01/10/885c184d8f6fa23d13b36c647efa2508.webp"
+        alt="Git installation on Windows"
+        class="rounded-lg shadow-lg mt-4 w-full max-w-md mx-auto"
+      />
+    </section>
+
+    <section id="macos-install" class="mt-12">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+        Installing Git on macOS
+      </h3>
+      <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+        <li>Open the <code class="bg-gray-100 p-1 rounded">Terminal</code>.</li>
+        <li>
+          Type <code class="bg-gray-100 p-1 rounded">git --version</code>. If
+          Git is not installed, you will be prompted to install it.
+        </li>
+        <li>
+          You can install Git with Homebrew by running the following command:
+          <pre
+            class="bg-gray-100 p-4 rounded-lg text-gray-800">
+brew install git
+          </pre>
+        </li>
+        <li>
+          Alternatively, you can install Git via Xcode Command Line Tools.
+        </li>
+      </ol>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/QMQ77RsKDHU?si=zziLKO6jiUtmVdMD"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        class="rounded-lg shadow-lg mt-4 w-full max-w-md mx-auto"
+        allowfullscreen></iframe>
+    </section>
+
+    <section id="linux-install" class="mt-12">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+        Installing Git on Linux
+      </h3>
+      <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+        <li>Open your terminal.</li>
+        <li>
+          Run the following commands:
+          <pre
+            class="bg-gray-100 p-4 rounded-lg text-gray-800">
+sudo apt update
+sudo apt-get install git
+          </pre>
+        </li>
+        <li>
+          Verify installation by running <code class="bg-gray-100 p-1 rounded"
+            >git --version</code
+          >.
+        </li>
+      </ol>
+      <img
+        src="https://bg-so-1.zippyimage.com/2025/01/10/c5634cd8ca17433bbc338d5df662a403.png"
+        alt="Git installation on Linux"
+        class="rounded-lg shadow-lg mt-4 w-full max-w-md mx-auto"
+      />
+    </section>
+
+    <!-- Git Configuration Section -->
+    <section class="mt-12">
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Configuring Git</h3>
+      <p class="text-gray-700 mb-4">
+        After installing Git, configure it with your username and email:
+      </p>
+      <pre
+        class="bg-gray-100 p-4 rounded-lg text-gray-800">
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+      </pre>
+      <p class="text-gray-700">
+        This information will be associated with all your commits.
+      </p>
+    </section>
+  </div>
+</MainLayout>

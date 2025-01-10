@@ -1,0 +1,191 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <div class="max-w-6xl mx-auto py-10 px-6">
+    <header class="text-center mb-10">
+      <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+        Introduction to Git and GitHub
+      </h1>
+      <p class="text-lg text-gray-600">
+        Learn the basics of version control with Git and collaboration through
+        GitHub, essential tools for modern developers.
+      </p>
+    </header>
+
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-6">What is Git?</h2>
+      <p class="text-gray-700 mb-4">
+        Git is a distributed version control system (VCS) that helps developers
+        track changes to their code, collaborate with other developers, and
+        maintain the integrity of their codebase over time. Git allows
+        developers to record changes, revert to previous states, and collaborate
+        on code without fear of losing progress.
+      </p>
+      <p class="text-gray-700 mb-4">
+        In Git, the entire history of changes is stored locally on your
+        computer, which allows developers to work offline and sync changes when
+        connected to the internet. Git provides a robust branching and merging
+        mechanism, making it easy to work on features independently and combine
+        them later.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-6">What is GitHub?</h2>
+      <p class="text-gray-700 mb-4">
+        GitHub is a cloud-based platform that hosts Git repositories, making it
+        easy for developers to store and share code. While Git is a version
+        control system that works locally, GitHub adds a layer of collaboration,
+        allowing developers to push their code to remote repositories, share it
+        with others, and work together on projects.
+      </p>
+      <p class="text-gray-700 mb-4">
+        GitHub offers additional features such as issues, pull requests,
+        continuous integration, and project management tools that enhance
+        collaboration in teams. It's a vital tool for modern software
+        development, and it's widely used for open-source contributions as well
+        as private team projects.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+        Why Use Git and GitHub?
+      </h2>
+      <p class="text-gray-700 mb-4">
+        Using Git and GitHub together provides several key benefits to
+        developers and teams:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
+        <li>
+          <strong>Version Control:</strong> Git enables you to track every change
+          made to your project. You can always go back to previous versions or fix
+          mistakes.
+        </li>
+        <li>
+          <strong>Collaboration:</strong> With GitHub, multiple developers can work
+          on the same project simultaneously without stepping on each other's toes.
+        </li>
+        <li>
+          <strong>Branching and Merging:</strong> Developers can create branches
+          to work on new features or bug fixes independently. These branches can
+          be merged back into the main project when they are ready.
+        </li>
+        <li>
+          <strong>Backup and Remote Storage:</strong> GitHub serves as a backup for
+          your projects, ensuring that your code is safe in the cloud.
+        </li>
+        <li>
+          <strong>Open Source:</strong> GitHub is the home of millions of open-source
+          projects, allowing developers to contribute to a vast number of public
+          repositories.
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+        Key Git Concepts
+      </h2>
+      <p class="text-gray-700 mb-4">
+        Before diving deeper into the practical usage of Git and GitHub, it's
+        important to understand some of the fundamental concepts of Git.
+      </p>
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Repositories</h3>
+      <p class="text-gray-700 mb-4">
+        A Git repository (or repo) is a place where all of the project's files
+        and the complete version history are stored. Git repositories can be
+        either local (on your computer) or remote (on GitHub or other services).
+      </p>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Commits</h3>
+      <p class="text-gray-700 mb-4">
+        A commit in Git represents a snapshot of your project at a particular
+        point in time. Each commit has a unique ID and contains a message
+        describing the change. Commits allow you to track changes to the
+        codebase and revert to previous versions when necessary.
+      </p>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Branches</h3>
+      <p class="text-gray-700 mb-4">
+        Branches are a powerful feature in Git that allows developers to work on
+        different tasks in parallel. You can create a new branch for each
+        feature or bug fix you work on, and later merge them back into the main
+        branch (usually called `main` or `master`) when they're complete.
+      </p>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mb-4">Merging</h3>
+      <p class="text-gray-700 mb-4">
+        Merging is the process of combining changes from one branch into
+        another. After completing work in a feature branch, you merge it into
+        the main branch. Git automatically handles most of the merge process,
+        but sometimes you may need to manually resolve conflicts.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+        GitHub's Role in Team Collaboration
+      </h2>
+      <p class="text-gray-700 mb-4">
+        GitHub enables team collaboration by allowing multiple developers to
+        contribute to a project in a structured and organized way. Here's how
+        GitHub enhances team workflows:
+      </p>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
+        <li>
+          <strong>Pull Requests (PRs):</strong> PRs are the core mechanism for code
+          review in GitHub. When a developer finishes working on a feature or bug
+          fix in a branch, they create a pull request to merge the changes into the
+          main branch.
+        </li>
+        <li>
+          <strong>Issues:</strong> GitHub allows teams to track bugs, tasks, and
+          feature requests with issues. These can be assigned to team members and
+          tracked for progress.
+        </li>
+        <li>
+          <strong>Team Permissions:</strong> GitHub allows repository admins to set
+          permissions for different team members. This ensures that only authorized
+          users can make changes to the codebase.
+        </li>
+        <li>
+          <strong>Project Boards:</strong> GitHub's project boards provide a way
+          to organize tasks visually using columns for things like "To Do," "In Progress,"
+          and "Completed."
+        </li>
+      </ul>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+        Getting Started with Git and GitHub
+      </h2>
+      <p class="text-gray-700 mb-4">
+        To start using Git and GitHub, you’ll need to follow a few simple steps:
+      </p>
+      <ol class="list-decimal pl-6 space-y-2 text-gray-700">
+        <li>
+          Install Git on your computer (follow the installation instructions for
+          your OS).
+        </li>
+        <li>
+          Create a GitHub account at <a
+            href="https://github.com"
+            class="text-blue-600 hover:underline">github.com</a
+          >.
+        </li>
+        <li>Clone a repository from GitHub to your local machine.</li>
+        <li>
+          Make changes to your local copy of the repository and commit them.
+        </li>
+        <li>
+          Push your changes to GitHub and create a pull request if you're
+          collaborating with a team.
+        </li>
+      </ol>
+    </section>
+  </div>
+</MainLayout>

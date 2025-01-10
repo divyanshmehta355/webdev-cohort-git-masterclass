@@ -1,0 +1,139 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <div class="max-w-6xl mx-auto py-10 px-6">
+    <!-- Header Section -->
+    <header class="text-center mb-10">
+      <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+        Essential Git Commands
+      </h1>
+      <p class="text-lg text-gray-600">
+        Master these Git commands to streamline your workflow at ChaiCode. Each
+        command is explained with examples to make your experience seamless.
+      </p>
+    </header>
+
+    <!-- Commands Section -->
+    <div class="space-y-12">
+      <!-- Command: git status -->
+      <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">1. git status</h2>
+        <p class="text-gray-600 mb-4">
+          Displays the status of your working directory, showing changes that
+          are staged, unstaged, or untracked.
+        </p>
+        <div class="bg-gray-100 p-4 rounded-lg">
+          <pre><code class="text-gray-800">git status</code></pre>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">
+          Example: Use this command to check the files that need to be
+          committed.
+        </p>
+      </div>
+
+      <!-- Command: git add -->
+      <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">2. git add</h2>
+        <p class="text-gray-600 mb-4">
+          Stages changes to be included in the next commit. You can add specific
+          files or all changes at once.
+        </p>
+        <div class="bg-gray-100 p-4 rounded-lg">
+          <pre><code class="text-gray-800">git add [file-name]</code></pre>
+          <pre><code class="text-gray-800">git add .</code></pre>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">
+          Example: Stage all changes using <code>git add .</code> or specific files
+          by replacing <code>[file-name]</code> with the filename.
+        </p>
+      </div>
+
+      <!-- Command: git commit -->
+      <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">3. git commit</h2>
+        <p class="text-gray-600 mb-4">
+          Saves the staged changes in your local repository. Always use a
+          meaningful commit message.
+        </p>
+
+        <!-- Commit Message Rules Inside Commit Card -->
+        <div class="bg-gray-50 p-4 rounded-lg mb-4">
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">
+            Commit Message Rules
+          </h3>
+          <ul class="list-disc list-inside text-gray-600 mb-4">
+            <li>
+              Use the present tense (e.g., "Add feature" not "Added feature").
+            </li>
+            <li>Capitalize the first letter of the message.</li>
+            <li>Keep the message short (50 characters or less).</li>
+            <li>
+              Use prefixes like <code>fix:</code>, <code>feat:</code>, <code
+                >chore:</code
+              >, <code>docs:</code> for categorization.
+            </li>
+          </ul>
+          <p class="text-gray-600">Example commit messages:</p>
+          <pre
+            class="bg-gray-100 p-4 rounded-lg mt-4"><code class="text-gray-800">
+feat: Add tea selection feature
+fix: Resolve login issue for tea enthusiasts
+docs: Update README with chai varieties
+          </code></pre>
+        </div>
+
+        <div class="bg-gray-100 p-4 rounded-lg">
+          <pre><code class="text-gray-800">git commit -m "Your commit message"</code></pre>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">
+          Example: <code>git commit -m "feat: Add user authentication"</code>
+        </p>
+      </div>
+
+      <!-- Command: git push -->
+      <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">4. git push</h2>
+        <p class="text-gray-600 mb-4">
+          Sends your committed changes to the remote repository.
+        </p>
+        <div class="bg-gray-100 p-4 rounded-lg">
+          <pre><code class="text-gray-800">git push</code></pre>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">
+          Example: Push changes to the <code>main</code> branch on GitHub.
+        </p>
+      </div>
+
+      <!-- Command: git pull -->
+      <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">5. git pull</h2>
+        <p class="text-gray-600 mb-4">
+          Updates your local repository with changes from the remote repository.
+        </p>
+        <div class="bg-gray-100 p-4 rounded-lg">
+          <pre><code class="text-gray-800">git pull</code></pre>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">
+          Example: Sync your branch with the latest changes from the remote
+          repository.
+        </p>
+      </div>
+
+      <!-- Command: git log -->
+      <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">6. git log</h2>
+        <p class="text-gray-600 mb-4">
+          Shows the commit history of your repository.
+        </p>
+        <div class="bg-gray-100 p-4 rounded-lg">
+          <pre><code class="text-gray-800">git log</code></pre>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">
+          Example: Use this to view commit IDs and messages for reference.
+        </p>
+      </div>
+    </div>
+  </div>
+</MainLayout>

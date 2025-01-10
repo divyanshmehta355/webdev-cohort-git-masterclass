@@ -1,0 +1,54 @@
+---
+// Import components
+import Sidebar from "../components/Sidebar.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <title>Git and GitHub Onboarding</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Basic styles for layout */
+      .main-layout {
+        display: flex;
+        flex-direction: row;
+        min-height: 100vh;
+      }
+
+      .main-content {
+        flex: 1;
+        padding: 1rem;
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+        .main-layout {
+          flex-direction: column;
+        }
+
+        .sidebar {
+          width: 100%;
+          position: relative;
+        }
+
+        .sidebar-hidden {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 font-sans">
+    <Header />
+    <div class="main-layout">
+      <Sidebar class="sidebar" />
+      <main class="main-content">
+        <slot />
+      </main>
+    </div>
+    <Footer />
+  </body>
+</html>

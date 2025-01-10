@@ -1,0 +1,174 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <div class="max-w-6xl mx-auto py-10 px-6">
+    <!-- Header Section -->
+    <header class="text-center mb-10">
+      <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+        Git Branching Workflow
+      </h1>
+      <p class="text-lg text-gray-600">
+        Understand Git branching strategies to efficiently manage code versions
+        and collaborate in a team environment.
+      </p>
+    </header>
+
+    <!-- Introduction to Branching -->
+    <section class="mb-10">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+        What is Branching?
+      </h2>
+      <p class="text-gray-600 leading-relaxed">
+        Branching allows developers to work on features, fixes, or experiments
+        in isolation from the main codebase. This ensures stability while
+        enabling parallel development. Each branch is like a snapshot of the
+        code at a specific point in time.
+      </p>
+    </section>
+
+    <!-- Branching Strategy -->
+    <section class="mb-10">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+        Branching Strategy at ChaiCode
+      </h2>
+      <ul class="list-disc pl-6 text-gray-600 leading-relaxed space-y-4">
+        <li>
+          <strong>Main Branch:</strong> The primary branch containing stable, production-ready
+          code.
+        </li>
+        <li>
+          <strong>Development Branch:</strong> Used for ongoing development and testing
+          before merging into the main branch.
+        </li>
+        <li>
+          <strong>Feature Branches:</strong> Created for new features or enhancements.
+          Example: <code>feature/login-page</code>.
+        </li>
+        <li>
+          <strong>Hotfix Branches:</strong> Used for critical bug fixes on the main
+          branch. Example: <code>hotfix/login-issue</code>.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Common Branching Commands -->
+    <section class="mb-10">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+        Common Git Branching Commands
+      </h2>
+      <div class="space-y-8">
+        <!-- Command: Create a Branch -->
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition"
+        >
+          <h3 class="text-2xl font-semibold text-gray-800 mb-2">
+            1. Create a Branch
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Create a new branch from the current branch.
+          </p>
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <pre><code class="text-gray-800">git branch feature/branch-name</code></pre>
+          </div>
+          <p class="text-sm text-gray-500 mt-2">
+            Example: <code>git branch feature/add-user-auth</code>
+          </p>
+        </div>
+
+        <!-- Command: Switch to a Branch -->
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition"
+        >
+          <h3 class="text-2xl font-semibold text-gray-800 mb-2">
+            2. Switch to a Branch
+          </h3>
+          <p class="text-gray-600 mb-4">Switch to an existing branch.</p>
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <pre><code class="text-gray-800">git checkout branch-name</code></pre>
+          </div>
+          <p class="text-sm text-gray-500 mt-2">
+            Example: <code>git checkout feature/add-user-auth</code>
+          </p>
+        </div>
+
+        <!-- Command: Merge a Branch -->
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition"
+        >
+          <h3 class="text-2xl font-semibold text-gray-800 mb-2">
+            3. Merge a Branch
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Merge the changes from another branch into the current branch.
+          </p>
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <pre><code class="text-gray-800">git merge branch-name</code></pre>
+          </div>
+          <p class="text-sm text-gray-500 mt-2">
+            Example: <code>git merge feature/add-user-auth</code>
+          </p>
+        </div>
+
+        <!-- Command: Delete a Branch -->
+        <div
+          class="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition"
+        >
+          <h3 class="text-2xl font-semibold text-gray-800 mb-2">
+            4. Delete a Branch
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Delete a branch that is no longer needed.
+          </p>
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <pre><code class="text-gray-800">git branch -d branch-name</code></pre>
+          </div>
+          <p class="text-sm text-gray-500 mt-2">
+            Example: <code>git branch -d feature/add-user-auth</code>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resolving Conflicts -->
+    <section class="mb-10">
+      <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+        Resolving Merge Conflicts
+      </h2>
+      <p class="text-gray-600 leading-relaxed">
+        Merge conflicts occur when changes in two branches overlap. Follow these
+        steps to resolve them:
+      </p>
+      <ul class="list-decimal pl-6 text-gray-600 leading-relaxed space-y-4">
+        <li>Identify conflicting files in the terminal.</li>
+        <li>
+          Edit the files to manually resolve conflicts (look for <code
+            >&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code
+          > markers).
+        </li>
+        <li>Stage the resolved files: <code>git add [file-name]</code>.</li>
+        <li>
+          Commit the changes: <code
+            >git commit -m "Resolve merge conflicts"</code
+          >.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Best Practices -->
+    <section>
+      <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+        Best Practices for Branching
+      </h2>
+      <ul class="list-disc pl-6 text-gray-600 leading-relaxed space-y-4">
+        <li>Keep branches small and focused on a single task or feature.</li>
+        <li>
+          Regularly sync your branch with the main branch to minimize conflicts.
+        </li>
+        <li>Always test your changes before merging.</li>
+        <li>Use meaningful branch names that describe their purpose.</li>
+      </ul>
+    </section>
+  </div>
+</MainLayout>
